@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="profile.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yawadwipa Studio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: url('background.jpg') no-repeat center center/cover;
+            background: url('background.png') no-repeat center center/cover;
             font-family: 'Arial', sans-serif;
             color: white;
             text-align: center;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
         header {
             background: black;
-            padding: 10px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
-        .logo { font-size: 24px; font-weight: bold; }
-        .nav { display: flex; gap: 20px; }
+        .logo {
+            position: absolute;
+            top: -45px; /* Membuat logo keluar dari header lebih jauh */
+            left: 25px; /* Mengembalikan logo ke pojok kiri */
+        }
+        .logo img {
+            height: 150px; /* Memperbesar ukuran logo */
+            width: auto;
+        }
+        .nav { display: flex; gap: 20px; margin-left: auto; }
         .nav button {
             background: none;
             border: none;
@@ -45,6 +58,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 50px;
         }
         .hidden { display: none; }
         .fade { animation: fadeIn 1s; }
@@ -74,7 +88,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">YAWADWIPA STUDIO</div>
+        <div class="logo"><img src="logo.png" alt="Yawadwipa Studio Logo"></div>
         <nav class="nav">
             <button onclick="showContent('about')">About</button>
             <button onclick="showContent('contact')">Contact</button>
@@ -84,27 +98,34 @@
     <div class="container">
         <div id="about" class="content"> 
             <h2>About Yawadwipa Studio</h2>
-            <p>Yawadwipa Studio is an independent game development studio focused on immersive experiences.</p>
+            <p>Yawadwipa Studio is an independent game development studio focused on immersive experiences. 
+               We strive to create unique and engaging worlds that captivate players and bring stories to life. 
+               Our team consists of passionate developers, artists, and designers who are dedicated to delivering high-quality games. 
+               Whether it's action-packed adventures or thought-provoking narratives, we aim to push the boundaries of interactive storytelling.</p>
         </div>
         <div id="contact" class="content hidden">
             <h2>Contact Us</h2>
-            <p>Email: contact@yawadwipa.com</p>
-            <p>Follow us on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+            <p>Have any questions? Feel free to reach out to us!</p>
+            <p>Email: yawadwipa.studio@gmail.com</p>
+            <p>Phone: +62</p>
+            <p>Follow us on social media for updates and news:</p>
+            <p><a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">YouTube</a></p>
+            <p>We are always looking forward to hearing from players, fans, and potential collaborators.</p>
         </div>
         <div id="games" class="content hidden">
             <h2>Our Games</h2>
             <div class="slideshow">
-                <img id="gameImage" src="screenshot1.jpg" alt="Game Screenshot">
+                <img id="gameImage" src="screenshot1.png" alt="Game Screenshot">
                 <button onclick="prevImage()">Prev</button>
                 <button onclick="nextImage()">Next</button>
             </div>
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Yawadwipa Studio. All rights reserved.</p>
+        <p>&copy; 2025 Yawadwipa Studio. All rights reserved. This web is still under construction :P</p>
     </footer>
     <script>
-        let images = ['screenshot1.jpg', 'screenshot2.jpg', 'screenshot3.jpg'];
+        let images = ['screenshot1.png', 'screenshot2.png', 'screenshot3.png'];
         let index = 0;
         
         function showContent(id) {
