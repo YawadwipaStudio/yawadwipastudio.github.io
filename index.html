@@ -99,20 +99,9 @@
             font-size: 16px;
         }
 
-        a.download-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background-color: #00c3ff;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        a.download-btn:hover {
-            background-color: #009ac7;
+        iframe {
+            margin-top: 30px;
+            border-radius: 10px;
         }
 
         footer {
@@ -125,10 +114,16 @@
             .logo img {
                 height: 70px;
             }
+
             .nav {
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 10px;
+            }
+
+            iframe {
+                width: 100% !important;
+                height: auto !important;
             }
         }
     </style>
@@ -171,16 +166,15 @@
             </div>
 
             <h3 style="margin-top: 40px;">Download Majapahit Prototype:</h3>
-<iframe frameborder="0"
-        src="https://itch.io/embed/3046267?dark=true"
-        width="552"
-        height="167"
-        style="margin-top: 20px; border-radius: 10px;">
-    <a href="https://yawadwipa-studio.itch.io/majapahit-prototype">
-        The Rise of Majapahit Prototype by Yawadwipa Studio
-    </a>
-</iframe>
-
+            <iframe frameborder="0"
+                    src="https://itch.io/embed/3046267?dark=true"
+                    width="552"
+                    height="167"
+                    style="max-width: 100%;">
+                <a href="https://yawadwipa-studio.itch.io/majapahit-prototype">
+                    The Rise of Majapahit Prototype by Yawadwipa Studio
+                </a>
+            </iframe>
         </div>
     </div>
 
